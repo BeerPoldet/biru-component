@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		050A62D721BCD20300725679 /* BiruComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050A62CD21BCD20200725679 /* BiruComponent.framework */; };
+		050A62DC21BCD20300725679 /* biru_componentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050A62DB21BCD20300725679 /* biru_componentTests.swift */; };
+		050A62DE21BCD20300725679 /* biru_component.h in Headers */ = {isa = PBXBuildFile; fileRef = 050A62D021BCD20200725679 /* biru_component.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050A62E921BCD68A00725679 /* Elm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050A62E721BCD68A00725679 /* Elm.swift */; };
+		050A62EA21BCD68A00725679 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050A62E821BCD68A00725679 /* Component.swift */; };
+		050A62ED21BCE6BD00725679 /* LayoutKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050A62EC21BCE6BD00725679 /* LayoutKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		050A62D821BCD20300725679 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 050A62C421BCD20200725679 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 050A62CC21BCD20200725679;
+			remoteInfo = "biru-component";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		050A62CD21BCD20200725679 /* BiruComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BiruComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		050A62D021BCD20200725679 /* biru_component.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = biru_component.h; sourceTree = "<group>"; };
+		050A62D121BCD20200725679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		050A62D621BCD20300725679 /* BiruComponentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BiruComponentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		050A62DB21BCD20300725679 /* biru_componentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = biru_componentTests.swift; sourceTree = "<group>"; };
+		050A62DD21BCD20300725679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		050A62E721BCD68A00725679 /* Elm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elm.swift; sourceTree = "<group>"; };
+		050A62E821BCD68A00725679 /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
+		050A62EC21BCE6BD00725679 /* LayoutKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LayoutKit.framework; path = Carthage/Build/iOS/LayoutKit.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		050A62CA21BCD20200725679 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050A62ED21BCE6BD00725679 /* LayoutKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		050A62D321BCD20300725679 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050A62D721BCD20300725679 /* BiruComponent.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		050A62C321BCD20200725679 = {
+			isa = PBXGroup;
+			children = (
+				050A62CF21BCD20200725679 /* biru-component */,
+				050A62DA21BCD20300725679 /* biru-componentTests */,
+				050A62CE21BCD20200725679 /* Products */,
+				050A62EB21BCE6BD00725679 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		050A62CE21BCD20200725679 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				050A62CD21BCD20200725679 /* BiruComponent.framework */,
+				050A62D621BCD20300725679 /* BiruComponentTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		050A62CF21BCD20200725679 /* biru-component */ = {
+			isa = PBXGroup;
+			children = (
+				050A62E821BCD68A00725679 /* Component.swift */,
+				050A62E721BCD68A00725679 /* Elm.swift */,
+				053A7E4321BCF37500A87157 /* Supporting Files */,
+			);
+			path = "biru-component";
+			sourceTree = "<group>";
+		};
+		050A62DA21BCD20300725679 /* biru-componentTests */ = {
+			isa = PBXGroup;
+			children = (
+				050A62DB21BCD20300725679 /* biru_componentTests.swift */,
+				050A62DD21BCD20300725679 /* Info.plist */,
+			);
+			path = "biru-componentTests";
+			sourceTree = "<group>";
+		};
+		050A62EB21BCE6BD00725679 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				050A62EC21BCE6BD00725679 /* LayoutKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		053A7E4321BCF37500A87157 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				050A62D021BCD20200725679 /* biru_component.h */,
+				050A62D121BCD20200725679 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		050A62C821BCD20200725679 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050A62DE21BCD20300725679 /* biru_component.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		050A62CC21BCD20200725679 /* BiruComponent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 050A62E121BCD20300725679 /* Build configuration list for PBXNativeTarget "BiruComponent" */;
+			buildPhases = (
+				050A62C821BCD20200725679 /* Headers */,
+				050A62C921BCD20200725679 /* Sources */,
+				050A62CA21BCD20200725679 /* Frameworks */,
+				050A62CB21BCD20200725679 /* Resources */,
+				053A7E4221BCED8300A87157 /* Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BiruComponent;
+			productName = "biru-component";
+			productReference = 050A62CD21BCD20200725679 /* BiruComponent.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		050A62D521BCD20300725679 /* BiruComponentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 050A62E421BCD20300725679 /* Build configuration list for PBXNativeTarget "BiruComponentTests" */;
+			buildPhases = (
+				050A62D221BCD20300725679 /* Sources */,
+				050A62D321BCD20300725679 /* Frameworks */,
+				050A62D421BCD20300725679 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				050A62D921BCD20300725679 /* PBXTargetDependency */,
+			);
+			name = BiruComponentTests;
+			productName = "biru-componentTests";
+			productReference = 050A62D621BCD20300725679 /* BiruComponentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		050A62C421BCD20200725679 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Assanee;
+				TargetAttributes = {
+					050A62CC21BCD20200725679 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+					050A62D521BCD20300725679 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 050A62C721BCD20200725679 /* Build configuration list for PBXProject "biru-component" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 050A62C321BCD20200725679;
+			productRefGroup = 050A62CE21BCD20200725679 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				050A62CC21BCD20200725679 /* BiruComponent */,
+				050A62D521BCD20300725679 /* BiruComponentTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		050A62CB21BCD20200725679 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		050A62D421BCD20300725679 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		053A7E4221BCED8300A87157 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/LayoutKit.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/LayoutKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		050A62C921BCD20200725679 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050A62E921BCD68A00725679 /* Elm.swift in Sources */,
+				050A62EA21BCD68A00725679 /* Component.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		050A62D221BCD20300725679 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050A62DC21BCD20300725679 /* biru_componentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		050A62D921BCD20300725679 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 050A62CC21BCD20200725679 /* BiruComponent */;
+			targetProxy = 050A62D821BCD20300725679 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		050A62DF21BCD20300725679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		050A62E021BCD20300725679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		050A62E221BCD20300725679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = AJF7ZDHAAX;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "biru-component/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "assanee.biru-component";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		050A62E321BCD20300725679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = AJF7ZDHAAX;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "biru-component/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "assanee.biru-component";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		050A62E521BCD20300725679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AJF7ZDHAAX;
+				INFOPLIST_FILE = "biru-componentTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "assanee.biru-componentTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		050A62E621BCD20300725679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AJF7ZDHAAX;
+				INFOPLIST_FILE = "biru-componentTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "assanee.biru-componentTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		050A62C721BCD20200725679 /* Build configuration list for PBXProject "biru-component" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				050A62DF21BCD20300725679 /* Debug */,
+				050A62E021BCD20300725679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		050A62E121BCD20300725679 /* Build configuration list for PBXNativeTarget "BiruComponent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				050A62E221BCD20300725679 /* Debug */,
+				050A62E321BCD20300725679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		050A62E421BCD20300725679 /* Build configuration list for PBXNativeTarget "BiruComponentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				050A62E521BCD20300725679 /* Debug */,
+				050A62E621BCD20300725679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 050A62C421BCD20200725679 /* Project object */;
+}
