@@ -6,5 +6,13 @@
 import LayoutKit
 
 public protocol Component {
-  func render() -> Layout
+
+  associatedtype State
+  associatedtype Action
+
+  var state: State { get set }
+
+  func render(state: State, send: @escaping (Action) -> ()) -> Layout
+
+  func reduce(state: State, action: Action) -> State
 }

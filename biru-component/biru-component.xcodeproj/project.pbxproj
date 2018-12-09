@@ -13,6 +13,7 @@
 		050A62E921BCD68A00725679 /* Elm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050A62E721BCD68A00725679 /* Elm.swift */; };
 		050A62EA21BCD68A00725679 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050A62E821BCD68A00725679 /* Component.swift */; };
 		050A62ED21BCE6BD00725679 /* LayoutKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050A62EC21BCE6BD00725679 /* LayoutKit.framework */; };
+		053A7E4521BCFE5100A87157 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053A7E4421BCFE5100A87157 /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		050A62E721BCD68A00725679 /* Elm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elm.swift; sourceTree = "<group>"; };
 		050A62E821BCD68A00725679 /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		050A62EC21BCE6BD00725679 /* LayoutKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LayoutKit.framework; path = Carthage/Build/iOS/LayoutKit.framework; sourceTree = "<group>"; };
+		053A7E4421BCFE5100A87157 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				050A62E821BCD68A00725679 /* Component.swift */,
 				050A62E721BCD68A00725679 /* Elm.swift */,
+				053A7E4421BCFE5100A87157 /* UIViewExtensions.swift */,
 				053A7E4321BCF37500A87157 /* Supporting Files */,
 			);
 			path = "biru-component";
@@ -106,8 +109,8 @@
 		053A7E4321BCF37500A87157 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				050A62D021BCD20200725679 /* biru_component.h */,
 				050A62D121BCD20200725679 /* Info.plist */,
+				050A62D021BCD20200725679 /* biru_component.h */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				050A62E921BCD68A00725679 /* Elm.swift in Sources */,
+				053A7E4521BCFE5100A87157 /* UIViewExtensions.swift in Sources */,
 				050A62EA21BCD68A00725679 /* Component.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,7 +410,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "biru-component/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/biru-component/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -437,7 +441,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "biru-component/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/biru-component/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
