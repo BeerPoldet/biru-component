@@ -13,6 +13,8 @@
 		050A62E921BCD68A00725679 /* Elm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050A62E721BCD68A00725679 /* Elm.swift */; };
 		050A62EA21BCD68A00725679 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050A62E821BCD68A00725679 /* Component.swift */; };
 		050A62ED21BCE6BD00725679 /* LayoutKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050A62EC21BCE6BD00725679 /* LayoutKit.framework */; };
+		05265B0F21BE9F1700880DFC /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05265B0E21BE9F1700880DFC /* Element.swift */; };
+		05265B1121BEA45C00880DFC /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05265B1021BEA45C00880DFC /* Renderer.swift */; };
 		053A7E4521BCFE5100A87157 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053A7E4421BCFE5100A87157 /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,8 @@
 		050A62E721BCD68A00725679 /* Elm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elm.swift; sourceTree = "<group>"; };
 		050A62E821BCD68A00725679 /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		050A62EC21BCE6BD00725679 /* LayoutKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LayoutKit.framework; path = Carthage/Build/iOS/LayoutKit.framework; sourceTree = "<group>"; };
+		05265B0E21BE9F1700880DFC /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
+		05265B1021BEA45C00880DFC /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		053A7E4421BCFE5100A87157 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				050A62E821BCD68A00725679 /* Component.swift */,
+				05265B0E21BE9F1700880DFC /* Element.swift */,
+				05265B1021BEA45C00880DFC /* Renderer.swift */,
 				050A62E721BCD68A00725679 /* Elm.swift */,
 				053A7E4421BCFE5100A87157 /* UIViewExtensions.swift */,
 				053A7E4321BCF37500A87157 /* Supporting Files */,
@@ -250,6 +256,8 @@
 			files = (
 				050A62E921BCD68A00725679 /* Elm.swift in Sources */,
 				053A7E4521BCFE5100A87157 /* UIViewExtensions.swift in Sources */,
+				05265B0F21BE9F1700880DFC /* Element.swift in Sources */,
+				05265B1121BEA45C00880DFC /* Renderer.swift in Sources */,
 				050A62EA21BCD68A00725679 /* Component.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

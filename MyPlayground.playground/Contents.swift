@@ -5,7 +5,7 @@ import LayoutKit
 
 var str = "Hello, playground"
 
-final class HelloWorldComponent: Component {
+struct HelloWorldComponent: StatefulComponent {
   enum TextAction {
     case didTap
   }
@@ -15,21 +15,11 @@ final class HelloWorldComponent: Component {
 
   var state = (count: 0, text: "Click me", textColor: UIColor.blue)
 
-  func render(state: State, send: @escaping (Action) -> ()) -> Layout {
-    return InsetLayout(
-      insets: EdgeInsets.init(top: 100, left: 50, bottom: 50, right: 100),
-      sublayout: LabelLayout(text: state.text, config: {
-        $0.addTapGestureRecognizer(action: {
-          send(.didTap)
-        })
-        $0.textColor = .white
-        $0.backgroundColor = state.textColor
-      })
-    )
+  func render(state: State, send: @escaping (Action) -> ()) -> Component {
+    return Label(text: state.text)
   }
 
   func reduce(state: State, action: Action) -> State {
-    print(state)
     switch action {
     case .didTap:
       let count = state.count + 1
@@ -39,11 +29,40 @@ final class HelloWorldComponent: Component {
         textColor: count % 2 == 0 ? .blue : .red
       )
     }
-
-    return state
   }
 }
 
-let rootViewController = Elm.createApp(root: HelloWorldComponent())
+//let rootViewController = Elm.createApp(root: HelloWorldComponent())
+//PlaygroundPage.current.liveView = rootViewController
+
+struct HelloComponent: StatelessComponent {
+  func render() -> Component {
+    return StackLayout(
+      children: [
+        Label(text: "Hello"),
+        StackLayout(children: [
+          Label(text: "Hello Mars"),
+          MarComponent(),
+          HelloWorldComponent()
+        ], axis: .horizontal)
+      ]
+    )
+  }
+}
+
+struct MarComponent: StatelessComponent {
+  func render() -> Component {
+    return Label(text: "I'm Mar")
+  }
+}
+
+let rootComponent = HelloComponent()
+
+let element = Elm.createElement(component: rootComponent)
+
+let rootViewController = UIViewController()
+rootViewController.view = Renderer.renderView(element)
+rootViewController.view.backgroundColor = .white
+
 PlaygroundPage.current.liveView = rootViewController
 PlaygroundPage.current.needsIndefiniteExecution = true
