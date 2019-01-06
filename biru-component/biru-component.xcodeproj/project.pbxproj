@@ -16,6 +16,7 @@
 		050A62ED21BCE6BD00725679 /* LayoutKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050A62EC21BCE6BD00725679 /* LayoutKit.framework */; };
 		05265B0F21BE9F1700880DFC /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05265B0E21BE9F1700880DFC /* Element.swift */; };
 		05265B1121BEA45C00880DFC /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05265B1021BEA45C00880DFC /* Renderer.swift */; };
+		0533347A21E2003D00A10D60 /* TypeEraser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533347921E2003D00A10D60 /* TypeEraser.swift */; };
 		053A7E4521BCFE5100A87157 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053A7E4421BCFE5100A87157 /* UIViewExtensions.swift */; };
 		05BB190721D784520040E882 /* ComponentC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BB190621D784520040E882 /* ComponentC.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,7 @@
 		050A62EC21BCE6BD00725679 /* LayoutKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LayoutKit.framework; path = Carthage/Build/iOS/LayoutKit.framework; sourceTree = "<group>"; };
 		05265B0E21BE9F1700880DFC /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
 		05265B1021BEA45C00880DFC /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		0533347921E2003D00A10D60 /* TypeEraser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeEraser.swift; sourceTree = "<group>"; };
 		053A7E4421BCFE5100A87157 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		05BB190621D784520040E882 /* ComponentC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +99,7 @@
 				053A7E4421BCFE5100A87157 /* UIViewExtensions.swift */,
 				05057E0E21C5010D009A5FDA /* ComponentA.swift */,
 				05BB190621D784520040E882 /* ComponentC.swift */,
+				0533347921E2003D00A10D60 /* TypeEraser.swift */,
 			);
 			path = "biru-component";
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				05265B1121BEA45C00880DFC /* Renderer.swift in Sources */,
 				050A62EA21BCD68A00725679 /* Component.swift in Sources */,
 				05057E0F21C5010D009A5FDA /* ComponentA.swift in Sources */,
+				0533347A21E2003D00A10D60 /* TypeEraser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

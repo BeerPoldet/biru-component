@@ -14,6 +14,8 @@
 		0533345221E1ED1300A10D60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0533345021E1ED1300A10D60 /* LaunchScreen.storyboard */; };
 		0533345D21E1ED1300A10D60 /* biru_component_exampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533345C21E1ED1300A10D60 /* biru_component_exampleTests.swift */; };
 		0533346821E1ED1300A10D60 /* biru_component_exampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533346721E1ED1300A10D60 /* biru_component_exampleUITests.swift */; };
+		0533347621E1FA2A00A10D60 /* BiruComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0533347521E1FA2A00A10D60 /* BiruComponent.framework */; };
+		0533347721E1FA2A00A10D60 /* BiruComponent.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0533347521E1FA2A00A10D60 /* BiruComponent.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0533347821E1FA2A00A10D60 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0533347721E1FA2A00A10D60 /* BiruComponent.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0533344421E1ED1000A10D60 /* biru-component-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "biru-component-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0533344721E1ED1000A10D60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +63,7 @@
 		0533346321E1ED1300A10D60 /* biru-component-exampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "biru-component-exampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0533346721E1ED1300A10D60 /* biru_component_exampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = biru_component_exampleUITests.swift; sourceTree = "<group>"; };
 		0533346921E1ED1300A10D60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0533347521E1FA2A00A10D60 /* BiruComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BiruComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0533347621E1FA2A00A10D60 /* BiruComponent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +95,7 @@
 		0533343B21E1ED1000A10D60 = {
 			isa = PBXGroup;
 			children = (
+				0533347521E1FA2A00A10D60 /* BiruComponent.framework */,
 				0533344621E1ED1000A10D60 /* biru-component-example */,
 				0533345B21E1ED1300A10D60 /* biru-component-exampleTests */,
 				0533346621E1ED1300A10D60 /* biru-component-exampleUITests */,
@@ -135,6 +154,7 @@
 				0533344021E1ED1000A10D60 /* Sources */,
 				0533344121E1ED1000A10D60 /* Frameworks */,
 				0533344221E1ED1000A10D60 /* Resources */,
+				0533347821E1FA2A00A10D60 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

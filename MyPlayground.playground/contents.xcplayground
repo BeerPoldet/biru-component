@@ -4,5 +4,6 @@
         <page name='Old'/>
         <page name='Component A'/>
         <page name='Component C'/>
+        <page name='Type Eraser'/>
     </pages>
 </playground>

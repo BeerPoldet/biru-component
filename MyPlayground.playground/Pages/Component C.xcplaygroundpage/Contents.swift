@@ -4,7 +4,7 @@ import UIKit
 import PlaygroundSupport
 import BiruComponent
 
-struct HelloState {
+struct HelloState: StateC {
   var message: String = "Hello"
   var count: Int = 1
 }
@@ -16,15 +16,18 @@ class Name: ComponentC<NoStateC> {
   }
 }
 
-class World: ComponentC<String> {
-  override var initialState: String! { return "Hello" }
+struct WorldState: StateC {
+  var x: String = "Hello"
+}
+
+class World: ComponentC<WorldState> {
   
   override func render() -> ElementC? {
     var children = [
-      label(text: "\(state), World"),
+      label(text: "\(state.x), World"),
       createElement(Name.self)
     ]
-    if state == "Hi" {
+    if state.x == "Hi" {
       children.insert(createElement(Name.self), at: 0)
     }
     return stack(children: children)
@@ -32,14 +35,12 @@ class World: ComponentC<String> {
   
   override func componentDidMount() {
     Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [unowned self] (_) in
-      self.setState("Hi")
+      self.setState(WorldState(x: "Hi"))
     }
   }
 }
 
 class Hello: ComponentC<HelloState> {
-  
-  override var initialState: HelloState! { return HelloState() }
   
   override func render() -> ElementC? {
     if state.count < 2 {
@@ -59,13 +60,6 @@ class Hello: ComponentC<HelloState> {
     Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { [unowned self] (_) in
       self.setState(HelloState(message: "Beer", count: self.state.count + 1))
     }
-  }
-}
-
-class B {
-  let text: String?
-  init(a: String?) {
-    self.text = a
   }
 }
 

@@ -10,8 +10,12 @@ import UIKit
 import LayoutKit
 
 //public typealias NoStateC = ()
-public protocol StateC {}
-public enum NoStateC {}
+public protocol StateC {
+  init()
+}
+public struct NoStateC: StateC {
+  public init() {}
+}
 
 public struct ElementC {
   var kind: KindC
@@ -28,39 +32,39 @@ public indirect enum KindC {
   case empty
   case label(text: String)
   case stack(children: [ElementC])
-  case component(type: BaseComponentC.Type)
+  case component(type: InternalComponentC.Type)
 }
 
-public protocol BaseComponentC {
+public protocol InternalComponentC {
   init()
   func render() -> ElementC?
   
   var update: (Any) -> () { get set }
   
   func updateState(_ state: Any)
-  var _state: Any { get set }
-  var _initialState: Any { get }
+  var internalState: StateC { get set }
   func componentDidMount()
   func componentWillUnmount()
 }
 
-open class ComponentC<State>: BaseComponentC {
+open class ComponentC<State: StateC>: InternalComponentC {
   
-  open private(set) var initialState: State! = nil
+  public var state: State
   
-  public var state: State!
-  
-  public var _state: Any {
+  public var internalState: StateC {
     get {
       return state
     }
     set {
-      state = newValue as? State
+      if let newValue = newValue as? State {
+        state = newValue
+      }
     }
   }
-  public var _initialState: Any { return initialState }
   
-  required public init() {}
+  required public init() {
+    self.state = State()
+  }
   open func componentDidMount() {}
   open func componentWillUnmount() {}
   
@@ -87,7 +91,7 @@ public func stack(children: [ElementC], key: String? = nil) -> ElementC {
   return ElementC(kind: .stack(children: children), key: key)
 }
 
-public func createElement(_ componentType: BaseComponentC.Type, key: String? = nil) -> ElementC {
+public func createElement(_ componentType: InternalComponentC.Type, key: String? = nil) -> ElementC {
   return ElementC(kind: .component(type: componentType), key: key)
 }
 
@@ -177,12 +181,12 @@ public enum Reconciler {
         appendChild(fiber, to: fiber.parent)
       }
     case .component(_):
-      let component = fiber.stateNode! as! BaseComponentC
+      let component = fiber.stateNode! as! InternalComponentC
       let childElement = component.performRender()
       print("*********** ", fiber.kind)
       print("*********** ", fiber.parent)
       if let childFiber = fiber.child {
-        print("Updating child", childElement, childFiber.kind)
+//        print("Updating child", childElement, childFiber.kind)
         if isSameKind(childElement, childFiber) {
           updateFiber(element: childElement, fiber: childFiber)
         } else {
@@ -212,7 +216,7 @@ public enum Reconciler {
     case .stack:
       fiber.view?.removeFromSuperview()
     case .component:
-      var component = (fiber.stateNode as! BaseComponentC)
+      var component = (fiber.stateNode as! InternalComponentC)
       component.componentWillUnmount()
       component.update = { _ in }
       removeFiber(fiber.child!)
@@ -322,7 +326,7 @@ public enum Reconciler {
     case .component:
       appendChild(child, to: parent.parent)
       if !parent.isAppendedToParent {
-        (parent.stateNode! as! BaseComponentC).componentDidMount()
+        (parent.stateNode! as! InternalComponentC).componentDidMount()
       }
       parent.isAppendedToParent = true
     case .root:
@@ -359,7 +363,6 @@ public enum Reconciler {
       return fiber
     case .component(let type):
       var component = type.init()
-      component._state = component._initialState
       let renderedElement: ElementC = component.performRender()
       let fiber = FiberC(kind: .component, props: nil, stateNode: component, parent: parent, key: element.key)
       let child = createFiber(element: renderedElement, parent: fiber)
@@ -425,7 +428,7 @@ extension FiberC {
   }
 }
 
-extension BaseComponentC {
+extension InternalComponentC {
   func performRender() -> ElementC {
     return self.render() ?? ElementC.init(kind: .empty)
   }
