@@ -6,18 +6,23 @@
 import UIKit
 import LayoutKit
 
+
 public enum Elm {
 
-  public static func createElement(component: Component) -> Element {
-    switch component {
-    case let baseComponent as BaseComponent:
-      return baseComponent.element
-    case let statelessComponent as StatelessComponent:
-      return createElement(component: statelessComponent.render())
-    default:
-      fatalError()
-    }
-  }
+//  public static func createElement<C: Component>(component: C) -> Element {
+  
+
+//    switch component {
+//    case let .baseComponent(element):
+//      return element
+//    case let .statelessComponent(render):
+//      return createElement(component: render())
+//    case let .statefulComponent(stateful):
+//      return .statefulElement(stateful: stateful)
+//    default:
+//      fatalError()
+//    }
+//  }
 }
 
 //public enum Elm {

@@ -8,10 +8,10 @@
 
 import Foundation
 
-public indirect enum Element {
-  case label(text: String)
-  case stackLayout(children: [Element], axis: StackLayout.Axis)
-}
+//public enum Element {
+//  case label(text: String, onTap: (() -> ())?)
+//  case stackLayout(children: [ComponentProtocol], axis: Axis)
+//}
 
 //struct ViewController: Element {
 //

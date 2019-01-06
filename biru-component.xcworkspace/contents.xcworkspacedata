@@ -7,4 +7,10 @@
    <FileRef
       location = "group:biru-component/biru-component.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:TestBiruComponent/TestBiruComponent.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:biru-component-example/biru-component-example.xcodeproj">
+   </FileRef>
 </Workspace>

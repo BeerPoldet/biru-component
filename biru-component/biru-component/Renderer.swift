@@ -10,59 +10,125 @@ import UIKit
 import LayoutKit
 
 protocol UIKitRenderer {
-  func render() -> Layout
+  func render(rerender: @escaping () -> ()) -> Layout
 }
 
-extension Element: UIKitRenderer {
-  public func render() -> Layout {
-    switch self {
-    case .label(text: let text):
-      return createLabel(text: text)
-    case let .stackLayout(children, axis):
-      return createStacklayout(children: children, axis: axis)
-    }
-  }
+//extension Component {
+//  func toVirtual() -> Virtual {
+//    switch self {
+//    case .base(let element):
+//      return .baseComponent(element)
+//    case .stateless(let render):
+//      return .statelessComponent(render: { render().toVirtual() })
+//    case .stateful(let handler):
+//      return .statefulComponent(handler)
+//    }
+//  }
+//}
 
-  private func createLabel(text: String) -> LabelLayout<UILabel> {
-    let labelLayout = LabelLayout(text: text)
-    return labelLayout
-  }
-
-  private func createStacklayout(children: [Element], axis: StackLayout.Axis) -> LayoutKit.StackLayout<UIView> {
-    func mapAxis(_ axis: StackLayout.Axis) -> LayoutKit.Axis {
-      switch axis {
-      case .horizontal: return .horizontal
-      case .vertical: return .vertical
-      }
-    }
-    return LayoutKit.StackLayout(
-      axis: mapAxis(axis),
-      sublayouts: children.map({ $0.render() })
-    )
-  }
-
-//  private static func createSend(
-//      component: StatefulComponent<Any, Any>,
-//      then: @escaping () -> ()
-//    ) -> (Any) -> () {
-//      var newComponenet = component
-//      return { action in
-//        DispatchQueue.global(qos: .userInitiated).sync {
-//          let newState = component.reduce(
-//            state: newComponenet.state,
-//            action: action
-//          )
-//          newComponenet.state = newState
-//          then()
-//        }
+//extension Virtual: UIKitRenderer {
+//  public func render(rerender: @escaping () -> ()) -> Layout {
+//    switch self {
+//    case .baseComponent(let element):
+//      switch element {
+//      case .label(text: let text):
+//        return createLabel(text: text)
+//      case let .stackLayout(children, axis):
+//        return createStacklayout(children: children, axis: axis, rerender: rerender)
+//      }
+//    case .statelessComponent(let render):
+//      return render().render(rerender: rerender)
+//    case .statefulComponent(let stateful):
+//      return stateful
+//        .render(stateful.state, stateful.createDispatch(then: rerender))
+//        .toVirtual()
+//        .render(rerender: rerender)
+//    }
+//  }
+//
+//  private func createLabel(text: String) -> LabelLayout<UILabel> {
+//    let labelLayout = LabelLayout(text: text)
+//    return labelLayout
+//  }
+//
+//  private func createStacklayout(children: [Component], axis: Axis, rerender: @escaping () -> ()) -> LayoutKit.StackLayout<UIView> {
+//    func mapAxis(_ axis: Axis) -> LayoutKit.Axis {
+//      switch axis {
+//      case .horizontal: return .horizontal
+//      case .vertical: return .vertical
 //      }
 //    }
-}
+//    return LayoutKit.StackLayout(
+//      axis: mapAxis(axis),
+//      sublayouts: children.map({ $0.toVirtual() }).map({ $0.render(rerender: rerender) })
+//    )
+//  }
+//
+////  private static func createSend(
+////    stateful: Stateful<Any, Any>,
+////    then: @escaping () -> ()
+////    ) -> (Any) -> () {
+////    var newStatefule = stateful
+////    return { action in
+////      DispatchQueue.global(qos: .userInitiated).sync {
+////        let newState = stateful.reduce(
+////          stateful.state,
+////          action
+////        )
+////        newStatefule.state = newState
+////        then()
+////      }
+////    }
+////  }
+//}
+
+
+//extension Element {
+//  public func toLayout() -> Layout {
+//    switch self {
+//    case .label(text: let text, onTap: let onTap):
+//      return createLabel(text: text, onTap: onTap)
+//    case let .stackLayout(children, axis):
+//      return createStackLayout(children: children, axis: axis)
+//    }
+//  }
+//
+//  private func createLabel(text: String, onTap: (() -> ())?) -> LabelLayout<UILabel> {
+//    return LabelLayout(text: text, config: {
+//      $0.addTapGestureRecognizer(action: onTap)
+//    })
+//  }
+//
+//  private func createStackLayout(children: [ComponentProtocol], axis: Axis) -> LayoutKit.StackLayout<UIView> {
+//    func mapAxis(_ axis: Axis) -> LayoutKit.Axis {
+//      switch axis {
+//      case .horizontal: return .horizontal
+//      case .vertical: return .vertical
+//      }
+//    }
+//    return LayoutKit.StackLayout(
+//      axis: mapAxis(axis),
+//      sublayouts: children.map({ $0.renderView(rerender: nil) })
+//    )
+//  }
+//}
 
 public enum Renderer {
-  public static func renderView(_ element: Element) -> UIView {
-    return element.render().arrangement().makeViews()
-  }
+//  public static func renderView(_ element: Element, container: UIView) {
+//    element.render(
+//      rerender: { renderView(element, container: container) }
+//    ).arrangement().makeViews(in: container)
+//  }
+
+//  public static func render(component: Component, into container: UIView) {
+//    render(virtual: component.toVirtual(), into: container)
+//  }
+//  
+//  public static func render(virtual: Virtual, into container: UIView) {
+//    virtual.render(
+//      rerender: { render(virtual: virtual, into: container) }
+//    ).arrangement().makeViews(in: container)
+//  }
 
 //  public static func createElement<Root>(
 //    root: Root
